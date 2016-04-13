@@ -19,7 +19,7 @@
 #ifndef __autoreleasing
 #define __autoreleasing
 #endif
-#ifndef __bdridge
+#ifndef __bridge
 #define __bridge
 #endif
 #endif
