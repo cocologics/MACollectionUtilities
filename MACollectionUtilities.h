@@ -15,8 +15,13 @@
 
 // no ARC ? -> declare the ARC attributes we use to be a no-op, so the compiler won't whine
 #if ! __has_feature( objc_arc )
+// for some reason Xcode 7.3 compiler complains about redefining __autoreleasing although we should have objc_arc
+#ifndef __autoreleasing
 #define __autoreleasing
+#endif
+#ifndef __bdridge
 #define __bridge
+#endif
 #endif
 
 
